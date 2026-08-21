@@ -9,9 +9,9 @@ Entender os fatores associados ao cancelamento (churn) de clientes de uma plataf
 ```
 analise-churn/
 ├── data/
-│   └── Streaming.csv          # Dataset bruto
+│   └── Streaming.csv          
 ├── notebooks/
-│   └── exploracao_inicial.ipynb   # Análise exploratória completa
+│   └── exploracao_inicial.ipynb   
 ├── requirements.txt
 └── README.md
 ```
@@ -27,7 +27,6 @@ Dataset com 5.000 clientes e 12 colunas, incluindo idade, gênero, região, mét
 3. Verificação de qualidade dos dados pós-tratamento
 4. Análise de correlação entre variáveis numéricas
 5. Teste de 8 hipóteses sobre fatores de churn
-6. Investigação cruzada entre as variáveis mais relevantes
 
 ## Principais Insights
 
@@ -49,13 +48,13 @@ Clientes pertencentes ao grupo com maior tempo desde a última atividade apresen
 
 ---
 
-### 3. Tickets de suporte ⚠️ (padrão sintético identificado)
+### 3. Tickets de suporte ⚠️ (possivel padrão sintético identificado)
 
 Clientes que registraram 5 ou mais tickets de suporte apresentaram 100% de churn na base analisada (278 clientes, 5,56% da base).
 
 **Investigação adicional:** ao analisar esse grupo em detalhe, `Churned` apresentou média = 1.0 e desvio-padrão = 0.0 — ou seja, churn perfeitamente determinístico, sem nenhuma exceção. As demais variáveis do grupo (satisfação, inatividade, gasto mensal) mantiveram variação normal e ampla. Esse padrão é estatisticamente incompatível com um comportamento real de mercado e indica fortemente uma **regra sintética embutida na geração do dataset** (ex: `se tickets >= 5, então Churned = 1`).
 
-**Insight:** Registrar 5 ou mais tickets de suporte é um sinal de risco de churn *dentro deste dataset*, mas deve ser tratado como uma característica artificial da base — não como um padrão de comportamento validado para aplicação em cenário real ou para uso direto em um modelo preditivo.
+**Insight:** Registrar 5 ou mais tickets de suporte é um sinal de risco de churn *dentro deste dataset*, mas deve ser tratado como uma característica artificial da base, não como um padrão de comportamento validado para aplicação em cenário real ou para uso direto em um modelo preditivo.
 
 ---
 
@@ -77,7 +76,7 @@ A investigação apontou três fatores com evidências mais fortes de associaç�
 
 - **Baixa satisfação**
 - **Maior período de inatividade**
-- **5 ou mais tickets de suporte** *(com ressalva: possível regra sintética do dataset — ver item 3)*
+- **5 ou mais tickets de suporte** *(com ressalva: possível regra sintética do dataset)*
 
 Além disso, foi identificada uma forte associação entre **menor gasto mensal e maior churn**, que deverá ser considerada nas próximas etapas da análise.
 
