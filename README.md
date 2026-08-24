@@ -17,6 +17,33 @@ analise-churn/
 ├── requirements.txt
 └── README.md
 ```
+## Dashboard Executivo
+Construção do dashboard interativo para consolidação dos KPIs operacionais e apoio à tomada de decisão:
+
+![Dashboard Power BI](img/foto-dashboard.png)
+
+### Estrutura do Dashboard:
+1. **KPIs Principais:** Total de clientes (5.000), total de churn (2.240) e comparativo de taxa de churn vs. benchmark de mercado (44,8% vs 40,0%).
+2. **Segmentações:** Filtros dinâmicos por Gênero (*Male, Female*) e Região (*East, North, South, West*).
+3. **Visões de Risco:** Gráficos segmentados com alertas em vermelho destacando os grupos críticos de churn (nota de satisfação entre 1 a 3 com 100,0%, inatividade no quartil 'Maior' com 80,6%, gasto mensal até $30 com 100,0% e 5 ou mais tickets de suporte com 100,0%).
+
+## Mapeamento & Teste de Hipóteses (Miro)
+
+Antes de iniciar a codificação e modelagem, utilizei o Miro como um **painel de organização visual** para planejar as etapas da análise, mapear anomalias dos dados e desenhar hipóteses e possíveis soluções para o negócio.
+
+Dividi esse planejamento em duas etapas:
+
+### 1. Exploração e Diagnóstico dos Dados
+Mapeamento rápido da distribuição das variáveis, identificação de campos nulos e detecção de anomalias que exigiriam tratamento estatístico prévio no Python:
+
+![Rascunho Miro - Exploração e Diagnóstico](img/miro-exploracao.png)
+
+---
+
+### 2. Rascunho de Hipóteses, Soluções e Resultados
+Estruturação de 8 hipóteses de negócio para direcionar a investigação estatística, mapeando as perguntas-chave, as ações propostas e o status final de cada teste:
+
+![Rascunho Miro - Hipóteses e Soluções](img/miro-hipoteses.png)
 
 ## Sobre os dados
 
