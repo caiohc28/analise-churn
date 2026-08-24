@@ -4,6 +4,8 @@
 
 Entender os fatores associados ao cancelamento (churn) de clientes de uma plataforma de streaming, a partir de uma análise exploratória de dados (EDA).
 
+> **Observação:** Como a base apresenta características que podem indicar dados sintéticos (como separações perfeitas de 100% de churn em múltiplos subgrupos), os resultados devem ser interpretados como evidências exploratórias de padrões no dataset, e não como relações de causa e efeito diretamente aplicáveis a uma operação real
+
 ## Estrutura do repositório
 
 ```
@@ -82,7 +84,7 @@ Clientes pertencentes ao grupo com maior tempo desde a última atividade apresen
 
 Clientes que registraram 5 ou mais tickets de suporte apresentaram 100% de churn na base analisada (278 clientes, 5,56% da base).
 
-**Insight:** Registrar 5 ou mais tickets de suporte é um sinal de risco de churn. No entanto, esse resultado deve ser interpretado com cautela, pois a concentração de 100% de churn nesse grupo pode indicar que a variável possui comportamento sintético ou artificial na base analisada.
+**Insight:** Registrar 5 ou mais tickets de suporte é um sinal de risco de churn. 
 
 ---
 
