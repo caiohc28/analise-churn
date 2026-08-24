@@ -13,7 +13,11 @@ analise-churn/
 ├── dashboard/
 │   └── dashboard-analise.pbix  
 ├── data/
-│   └── Streaming.csv          
+│   └── Streaming.csv
+├── img/
+│   └── foto-dashboard.png
+│   └── miro-exploracao.png
+│   └── miro-hipoteses.png          
 ├── notebooks/
 │   └── exploracao_inicial.ipynb   
 ├── requirements.txt
