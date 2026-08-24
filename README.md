@@ -24,7 +24,7 @@ analise-churn/
 ├── requirements.txt
 └── README.md
 ```
-## Dashboard
+## Dashboard (Power BI)
 Construção do dashboard interativo para consolidação dos KPIs operacionais e apoio à tomada de decisão:
 
 ![Dashboard Power BI](img/foto-dashboard.png)
