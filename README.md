@@ -4,7 +4,8 @@
 
 Entender os fatores associados ao cancelamento (churn) de clientes de uma plataforma de streaming, a partir de uma análise exploratória de dados (EDA).
 
-> **Observação:** Como a base apresenta características que podem indicar dados sintéticos (como separações perfeitas de 100% de churn em múltiplos subgrupos), os resultados devem ser interpretados como evidências exploratórias de padrões no dataset, e não como relações de causa e efeito diretamente aplicáveis a uma operação real
+> ⚠️ Base de dados do Kaggle (Streaming Service Data), com possíveis valores sintéticos, por isso, os percentuais extremos (como os 100% de churn) devem ser lidos como padrões do dataset.
+
 
 ## Estrutura do repositório
 
