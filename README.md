@@ -29,6 +29,7 @@ Dataset com 5.000 clientes e 12 colunas, incluindo idade, gênero, região, mét
 3. Verificação de qualidade dos dados pós-tratamento
 4. Análise de correlação entre variáveis numéricas
 5. Teste de 8 hipóteses sobre fatores de churn
+6. Criação de dashboard no Power BI para visualização dos dados
 
 ## Principais Insights
 
