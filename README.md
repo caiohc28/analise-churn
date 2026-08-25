@@ -71,7 +71,7 @@ Embora o Random Forest tenha apresentado métricas superiores (AUC 0.999 vs 0.89
 validação cruzada confirmou que essa performance reflete os padrões determinísticos do 
 dataset sintético, e não uma capacidade real de generalização. A Regressão Logística, com 
 AUC ~0.90, apresenta um resultado mais representativo do que se esperaria em dados de 
-produção, além de oferecer maior interpretabilidade — permitindo à equipe de CS entender 
+produção, além de oferecer maior interpretabilidade, permitindo à equipe de CS entender 
 quais fatores mais pesam na decisão de cancelamento e agir sobre eles. O Random Forest 
 segue útil como ferramenta exploratória de *feature importance*, mas não é recomendado 
 como modelo final de decisão neste contexto.
