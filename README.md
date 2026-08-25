@@ -4,7 +4,8 @@
 
 Entender os fatores associados ao cancelamento (churn) de clientes de uma plataforma de streaming, a partir de uma análise exploratória de dados (EDA).
 
-> **Observação:** Como a base apresenta características que podem indicar dados sintéticos (como separações perfeitas de 100% de churn em múltiplos subgrupos), os resultados devem ser interpretados como evidências exploratórias de padrões no dataset, e não como relações de causa e efeito diretamente aplicáveis a uma operação real
+> ⚠️ Base de dados do Kaggle (Streaming Service Data), com possíveis valores sintéticos, por isso, os percentuais extremos (como os 100% de churn) devem ser lidos como padrões do dataset.
+
 
 ## Estrutura do repositório
 
@@ -13,13 +14,17 @@ analise-churn/
 ├── dashboard/
 │   └── dashboard-analise.pbix  
 ├── data/
-│   └── Streaming.csv          
+│   └── Streaming.csv
+├── img/
+│   └── foto-dashboard.png
+│   └── miro-exploracao.png
+│   └── miro-hipoteses.png          
 ├── notebooks/
 │   └── exploracao_inicial.ipynb   
 ├── requirements.txt
 └── README.md
 ```
-## Dashboard Executivo
+## Dashboard (Power BI)
 Construção do dashboard interativo para consolidação dos KPIs operacionais e apoio à tomada de decisão:
 
 ![Dashboard Power BI](img/foto-dashboard.png)
