@@ -52,6 +52,32 @@ Estruturação de 8 hipóteses de negócio para direcionar a investigação esta
 
 ![Rascunho Miro - Hipóteses e Soluções](img/miro-hipoteses.png)
 
+## Modelagem Preditiva
+
+Construí dois modelos para prever churn: Regressão Logística e Random Forest.
+
+| Modelo | Acurácia | ROC-AUC (teste) | ROC-AUC (validação cruzada, 5 folds) |
+|---|---|---|---|
+| Regressão Logística | 80.8% | 0.900 | 0.897 (±0.006) |
+| Random Forest | 99.2% | 0.9997 | 0.999 (±0.0004) |
+
+> ⚠️ O desempenho quase perfeito do Random Forest reflete os padrões determinísticos 
+> já identificados na EDA (ex: Satisfaction_Score 1-3 = 100% churn), e não deve ser 
+> interpretado como o desempenho esperado em produção com dados reais.
+
+**Modelo escolhido:** Regressão Logística.
+
+Embora o Random Forest tenha apresentado métricas superiores (AUC 0.999 vs 0.897), a 
+validação cruzada confirmou que essa performance reflete os padrões determinísticos do 
+dataset sintético, e não uma capacidade real de generalização. A Regressão Logística, com 
+AUC ~0.90, apresenta um resultado mais representativo do que se esperaria em dados de 
+produção, além de oferecer maior interpretabilidade — permitindo à equipe de CS entender 
+quais fatores mais pesam na decisão de cancelamento e agir sobre eles. O Random Forest 
+segue útil como ferramenta exploratória de *feature importance*, mas não é recomendado 
+como modelo final de decisão neste contexto.
+
+Ver notebook completo com a análise técnica em [`notebooks/modelo-preditivo.ipynb`](notebooks/modelo-preditivo.ipynb).
+
 ## Sobre os dados
 
 Dataset com 5.000 clientes e 12 colunas, incluindo idade, gênero, região, método de pagamento, tempo de assinatura, tickets de suporte, satisfação, desconto oferecido, dias desde a última atividade, gasto mensal e status de churn.
