@@ -1,4 +1,4 @@
-# Análise de Churn — Plataforma de Streaming
+# Análise de Churn em plataforma de Streaming
 
 ## Objetivo
 
